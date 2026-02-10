@@ -1,10 +1,15 @@
+"use client";
 import Image from "next/image";
 import HoverNavbarText from "./HoverNavbarText";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
 export default function NavBar() {
+  const [active, setActive] = useState("");
+  const menuTitle = ["Home", "About", "Pricing", "FAQ"];
+
   return (
-    <div className="w-[80%] md:w-[572px] h-[66px] bg-[#1e1e20] mx-auto border border-[#e9e9e93a] rounded-2xl mt-8 p-2 flex justify-between items-center">
+    <div className="w-[80%] md:w-[572px] h-[66px] bg-[#1e1e20] border border-[#e9e9e93a] rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-50">
       {/* left */}
       <div>
         <div className="relative w-[61px] h-[47px] rounded-xl overflow-hidden cursor-pointer">
@@ -19,10 +24,17 @@ export default function NavBar() {
 
       {/* center */}
       <div className="md:flex gap-2 w-[50%] h-fit hidden">
-        <HoverNavbarText text="Home" />
-        <HoverNavbarText text="About" />
-        <HoverNavbarText text="Services" />
-        <HoverNavbarText text="Contact" />
+        {menuTitle.map((val, i) => {
+          return (
+            <div
+              key={val + i}
+              className={`rounded-md ${active === val ? "bg-[#2f2e30] " : null} `}
+              onClick={() => setActive(val)}
+            >
+              <HoverNavbarText text={val} />
+            </div>
+          );
+        })}
       </div>
 
       {/* right */}

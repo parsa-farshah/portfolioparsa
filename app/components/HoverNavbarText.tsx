@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 
-export default function HoverNavbarText({ text } : {text : string}) {
+export default function HoverNavbarText({ text }: { text: string }) {
   const topRef = useRef();
   const bottomRef = useRef();
 
@@ -48,7 +48,7 @@ export default function HoverNavbarText({ text } : {text : string}) {
   }, []);
 
   return (
-    <div className="relative w-[60px] h-[36px] text-sm flex items-center justify-center cursor-pointer overflow-hidden">
+    <div className="relative px-3 py-4 rounded-md w-[60px] h-[36px] text-sm flex items-center justify-center cursor-pointer overflow-hidden">
       {/* Top text */}
       <span
         ref={topRef}
