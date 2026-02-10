@@ -15,7 +15,7 @@ export default function ImageDragable() {
       const xNorm = mouseX / rect.width - 0.5;
 
       gsap.to(imgRef.current, {
-        rotateY: xNorm * 25, 
+        rotateY: xNorm * 25,
         duration: 0.3,
         ease: "power3.out",
         transformPerspective: 1000,
@@ -24,12 +24,14 @@ export default function ImageDragable() {
   }, []);
 
   return (
-    <div ref={parentRef} className="flex justify-center items-center h-fit">
-      <div
-        ref={imgRef}
-        className="relative w-[300px] h-[400px] rounded-xl overflow-hidden border border-[#a0a0a0]"
-      >
-        <Image src="/images/parsa.png" fill className="object-cover" alt="" />
+    <div ref={parentRef} className="w-full md:w-[80%] mx-auto">
+      <div className="flex justify-center items-center h-fit">
+        <div
+          ref={imgRef}
+          className="relative w-[300px] h-[400px] rounded-xl overflow-hidden border border-[#a0a0a0]"
+        >
+          <Image src="/images/parsa.png" fill className="object-cover" alt="" />
+        </div>
       </div>
     </div>
   );
