@@ -1,7 +1,7 @@
 import Image from "next/image";
 import HoverNavbarText from "./HoverNavbarText";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 export default function NavBar() {
   return (
     <div className="w-[80%] md:w-[572px] h-[66px] bg-[#1e1e20] mx-auto border border-[#e9e9e93a] rounded-2xl mt-8 p-2 flex justify-between items-center">
@@ -30,7 +30,12 @@ export default function NavBar() {
         {/* dark light icon */}
         <div className="w-8 h-8 rounded-full border border-[#ffffff60] flex justify-center items-center">
           <NightsStayIcon
-            sx={{ width: "20px", height: "20px", cursor: "pointer" }}
+            sx={{
+              width: "20px",
+              height: "20px",
+              cursor: "pointer",
+              color: "white",
+            }}
           />
         </div>
         {/* contact */}
@@ -41,7 +46,12 @@ export default function NavBar() {
         {/* dark light icon */}
         <div className="w-8 h-8 rounded-md border border-[#ffffff5e] flex justify-center items-center md:hidden">
           <MenuIcon
-            sx={{ width: "20px", height: "20px", cursor: "pointer" }}
+            sx={{
+              width: "20px",
+              height: "20px",
+              cursor: "pointer",
+              color: "white",
+            }}
           />
         </div>
       </div>
