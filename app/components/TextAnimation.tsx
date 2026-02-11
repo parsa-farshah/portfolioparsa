@@ -3,7 +3,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 
 const TextAnimation = () => {
-  const txt = useRef();
+  const txt = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     gsap.fromTo(

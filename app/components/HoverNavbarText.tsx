@@ -18,7 +18,7 @@ export default function HoverNavbarText({ text }: { text: string }) {
     gsap.set(bottomSplit.chars, { y: 20, opacity: 0 });
 
     // create timeline
-    const tl = gsap.timeline({ paused: true });
+    const tl : any = gsap.timeline({ paused: true });
 
     // animate top text up and fade out
     tl.to(topSplit.chars, {
@@ -41,7 +41,7 @@ export default function HoverNavbarText({ text }: { text: string }) {
         "<", // start at the same time
       );
 
-    const btn = topRef.current.parentElement;
+    const btn : any = topRef.current.parentElement;
 
     btn.addEventListener("mouseenter", () => tl.play());
     btn.addEventListener("mouseleave", () => tl.reverse());

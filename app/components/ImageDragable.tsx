@@ -9,7 +9,7 @@ export default function ImageDragable() {
 
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
-      const rect = parentRef.current.getBoundingClientRect();
+      const rect = parentRef.current!.getBoundingClientRect();
 
       const mouseX = e.clientX - rect.left;
       const xNorm = mouseX / rect.width - 0.5;
