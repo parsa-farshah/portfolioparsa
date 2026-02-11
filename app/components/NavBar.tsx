@@ -33,7 +33,7 @@ export default function NavBar() {
           return (
             <div
               key={val + i}
-              className={`rounded-md ${active === val ? "bg-[#2f2e30] " : null} `}
+              className={`rounded-md ${active === val ? "bg-[#c5c5c5d7]" : null} `}
               onClick={() => setActive(val)}
             >
               <HoverNavbarText text={val} />

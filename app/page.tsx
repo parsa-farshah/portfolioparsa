@@ -2,6 +2,7 @@
 import Header from "./components/Header";
 import LineAndShadowHEader from "./components/LineAndShadowHEader";
 import LineRow from "./components/LineRow";
+import LogosAnimation from "./components/LogosAnimation";
 import NavBar from "./components/NavBar";
 import useData from "./store";
 
@@ -18,10 +19,8 @@ export default function Home() {
       <div className="w-full h-fit">
         <Header />
       </div>
-      {/* line row */}
-      <div className="mt-2">
-        <LineRow />
-      </div>
+      {/* logo row*/}
+      <LogosAnimation />
     </div>
   );
 }
