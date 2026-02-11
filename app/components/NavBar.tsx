@@ -12,7 +12,9 @@ export default function NavBar() {
   const menuTitle = ["Home", "About", "Pricing", "FAQ"];
   const { theme, updateTheme } = myData();
   return (
-    <div className="w-[80%] md:w-[572px] h-[66px] bg-[#1e1e20] border border-[#e9e9e93a] rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-50">
+    <div
+      className={`w-[80%] md:w-[572px] h-[66px]  border border-[#c2c2c273] rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-50 backdrop-blur-lg ${theme ? "bg-[#d3d3d3bb] text-black" : "bg-[#1e1e20] text-white"} `}
+    >
       {/* left */}
       <div>
         <div className="relative w-[61px] h-[47px] rounded-xl overflow-hidden cursor-pointer">
@@ -45,7 +47,7 @@ export default function NavBar() {
         {/* dark light icon */}
         <div
           onClick={() => updateTheme(!theme)}
-          className="w-8 h-8 rounded-full border border-[#ffffff60] flex justify-center items-center overflow-hidden"
+          className={`w-8 h-8 rounded-full border  flex justify-center items-center overflow-hidden ${theme ? "border-[#74747460]" : "border-[#ffffff60] "}`}
         >
           {theme ? (
             <Slide
@@ -61,7 +63,7 @@ export default function NavBar() {
                   width: "20px",
                   height: "20px",
                   cursor: "pointer",
-                  color: "white",
+                  color: theme ? "black" : "white",
                 }}
               />
             </Slide>
@@ -79,7 +81,7 @@ export default function NavBar() {
                   width: "20px",
                   height: "20px",
                   cursor: "pointer",
-                  color: "white",
+                  color: theme ? "black" : "white",
                 }}
               />
             </Slide>
@@ -91,12 +93,14 @@ export default function NavBar() {
         </div>
         {/* menu humburger in menu  */}
         {/* dark light icon */}
-        <div className="w-8 h-8 rounded-md border border-[#ffffff5e] flex justify-center items-center md:hidden cursor-pointer">
+        <div
+          className={`w-8 h-8 rounded-md border  flex justify-center items-center md:hidden cursor-pointer ${theme ? "border-[#74747460]" : "border-[#ffffff60] "} `}
+        >
           <MenuIcon
             sx={{
               width: "20px",
               height: "20px",
-              color: "white",
+              color: theme ? "black": "white",
             }}
           />
         </div>
