@@ -9,10 +9,10 @@ const LogoAnimationWithGsap = () => {
   useEffect(() => {
     gsap.fromTo(
       txt.current,
-      { x: "100%" },
+      { x: "55%" },
       {
-        x: "-100%",
-        duration: 25,
+        x: "-60%",
+        duration: 20,
         ease: "linear",
         repeat: -1,
       },
@@ -21,7 +21,7 @@ const LogoAnimationWithGsap = () => {
   return (
     <div className="w-[95.5%] md:w-[75.5%] mx-auto overflow-hidden ">
       <div
-        className="inline-flex whitespace-nowrap gap-8 py-6"
+        className="inline-flex whitespace-nowrap gap-26 py-20"
         ref={txt}
       >
         <div className="w-16 h-16 relative">
