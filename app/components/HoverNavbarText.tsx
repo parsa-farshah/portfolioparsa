@@ -4,8 +4,8 @@ import gsap from "gsap";
 import SplitType from "split-type";
 
 export default function HoverNavbarText({ text }: { text: string }) {
-  const topRef = useRef<any>(null);
-  const bottomRef = useRef<any>(null);
+  const topRef = useRef<HTMLDivElement | null>(null);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!topRef.current || !bottomRef.current) return;

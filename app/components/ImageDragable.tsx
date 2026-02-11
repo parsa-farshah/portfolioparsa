@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function ImageDragable() {
-  const parentRef = useRef<any>(null);
-  const imgRef = useRef<any>(null);
+  const parentRef = useRef<HTMLDivElement | null>(null);
+  const imgRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
