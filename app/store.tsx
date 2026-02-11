@@ -1,7 +1,13 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-const myData = create(
+
+interface TypeData {
+  theme: boolean ,
+  updateTheme : any
+}
+
+const myData = create<TypeData>()(
   persist(
     (set) => ({
       theme: true,
