@@ -28,7 +28,7 @@ export default function ImageDragable() {
       <div className="flex justify-center items-center h-fit">
         <div
           ref={imgRef}
-          className="relative w-[300px] h-[400px] rounded-xl overflow-hidden border border-[#a0a0a0]"
+          className="relative w-[300px] h-[370px] rounded-xl overflow-hidden border border-[#a0a0a0]"
         >
           <Image src="/images/parsa.png" fill className="object-cover" alt="" />
         </div>
