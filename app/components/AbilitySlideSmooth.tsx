@@ -12,11 +12,15 @@ const AbilitySlideSmooth = ({
   alt,
   text,
   paragraph,
+  end,
+  z,
 }: {
   alt: string;
   src: string;
   text: string;
   paragraph: string;
+  end: number;
+  z: number;
 }) => {
   const { theme } = myData();
   const boxRef = useRef<HTMLDivElement | null>(null);
@@ -27,19 +31,19 @@ const AbilitySlideSmooth = ({
 
     gsap.fromTo(
       boxRef.current,
-      { y: 300, opacity: 0, scale: 0.7 },
+      { y: 150, scale: 0.7 },
       {
         y: 0,
-        opacity: 1,
         scale: 1,
         ease: "power3.out",
+        duration: 0.4,
         scrollTrigger: {
           trigger: wrapperRef.current,
-          start: "center center",
-          end: "+=3000",
+          start: `center center`,
+          end: `+=${end}`,
           pin: true,
           scrub: 1.5,
-          pinSpacing: true,
+          pinSpacing: false,
           markers: true,
         },
       },
@@ -49,11 +53,11 @@ const AbilitySlideSmooth = ({
   return (
     <div
       ref={wrapperRef}
-      className="h-[200vh] flex items-center justify-center"
+      className={`w-full h-[100vh] absolute top-0 left-0 flex justify-center items-center z-${z}`}
     >
       <div
         ref={boxRef}
-        className={`w-[382px] md:w-[667px] h-fit rounded-xl shadow-xl mx-auto border relative overflow-hidden p-8 md:p-6 ${
+        className={`w-[80%] md:w-[667px] h-fit rounded-xl shadow-md mx-auto border overflow-hidden p-8 md:p-6 ${
           theme
             ? "bg-[#f5f2f0] border-[#d4d2cf]"
             : "bg-[#0b0c0f] border-[#27282a]"
@@ -85,10 +89,10 @@ const AbilitySlideSmooth = ({
             <Image fill src={src} alt={alt} />
           </div>
         </div>
-        <h4 className={`mt-5  ${theme ? "text-[#343536]" : "text-[#c1c0c1]"}`}>
+        <h4 className={`mt-5 relative z-30  ${theme ? "text-[#343536]" : "text-[#c1c0c1]"}`}>
           {text}
         </h4>
-        <p className="mt-24 text-[#6d788c] relative z-10">{paragraph}</p>
+        <p className="mt-24 text-[#6d788c] relative z-10 text-justify text-sm">{paragraph}</p>
       </div>
     </div>
   );

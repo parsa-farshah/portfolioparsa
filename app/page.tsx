@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 import useData from "./store";
 
 export default function Home() {
-  const { theme } = useData();
+  const { theme  } = useData();
   return (
     <div
       className={` w-full h-[9000vh] flex flex-col relative overflow-hidden ${theme ? "bg-[#f6f3f0]" : "bg-[#0b0c0e]"} `}
