@@ -3,10 +3,18 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import AbilitySlideSmooth from "./AbilitySlideSmooth";
+import myData from "../store";
+import { Carattere } from "next/font/google";
+
 
 gsap.registerPlugin(ScrollTrigger);
+const carattere = Carattere({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export default function Ability() {
+  const { theme } = myData();
   const container = useRef<HTMLDivElement>(null);
   const slides = useRef<HTMLDivElement[]>([]);
 
@@ -29,7 +37,8 @@ export default function Ability() {
   }, []);
 
   return (
-    <div ref={container} className="relative h-[400vh]">
+    <div ref={container} className="relative py-20">
+ 
       {[
         {
           text: "Web Design",

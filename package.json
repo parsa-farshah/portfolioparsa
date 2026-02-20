@@ -14,6 +14,7 @@
     "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
     "gsap": "^3.14.2",
+    "keen-slider": "^6.8.6",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
