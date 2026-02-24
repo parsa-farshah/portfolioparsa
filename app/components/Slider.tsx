@@ -14,7 +14,27 @@ export default function Slider() {
 
   const myProjects = [
     {
-      id: 1,
+      id: "shop",
+      title: " Oliver Cabell Shop",
+      shortDesc: "A modern and fully functional e-commerce website",
+      description:
+        "A modern and fully functional e-commerce website inspired by Oliver Cabell built with Next.js, TypeScript, and TailwindCSS, featuring persistent global state, authentication, dynamic pages, and a smooth shopping experience.",
+      liveDemo: "https://nike-shop-next.vercel.app/",
+      repository: "https://github.com/parsa-farshah/nikeShopNext",
+      imageSrc:
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/shopImage.png",
+    },
+    {
+      id: "adminPanel",
+      title: "Modern Admin Panel",
+      shortDesc:
+        "A modern and professional Admin Panel built with Next.js and Material UI (MUI)",
+      description: `A modern and professional Admin Panel built with Next.js and Material UI (MUI)
+Featuring Dark / Light Mode, Persian & English languages, Login system with MockAPI, and a fully functional Analytics Dashboard with Skeleton Loading.`,
+      liveDemo: "https://admin-panel-bkq.pages.dev/",
+      repository: "https://github.com/parsa-farshah/admin-panel",
+      imageSrc:
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/shopImage.png",
     },
   ];
 
@@ -36,11 +56,9 @@ export default function Slider() {
           More Detail
         </button>
         <div className="absolute left-[5%] bottom-[5%] flex flex-col gap-2">
-          <h1 className="text-xl font-bold">
-            Oliver Cabell Shop
-          </h1>
+          <h1 className="text-xl font-bold">Oliver Cabell Shop</h1>
           <p className="text-sm font-medium">
-            A modern and fully functional e-commerce website 
+            A modern and fully functional e-commerce website
           </p>
         </div>
       </div>
