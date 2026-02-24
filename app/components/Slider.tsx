@@ -37,16 +37,39 @@ Featuring Dark / Light Mode, Persian & English languages, Login system with Mock
         "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/adminPanel.png",
     },
     {
-      id: "adminPanel",
-      title: "Modern Admin Panel",
+      id: "parallax",
+      title: "OIL STAIN Parallax Concept",
       shortDesc:
-        "A modern and professional Admin Panel built with Next.js and Material UI (MUI)",
-      description: `A modern and professional Admin Panel built with Next.js and Material UI (MUI)
-Featuring Dark / Light Mode, Persian & English languages, Login system with MockAPI, and a fully functional Analytics Dashboard with Skeleton Loading.`,
-      liveDemo: "https://admin-panel-bkq.pages.dev/",
-      repository: "https://github.com/parsa-farshah/admin-panel",
+        "A fully immersive parallax website concept inspired by the award-winning design of Oil Stain Lab.",
+      description: `A fully immersive parallax website concept inspired by the award-winning design of Oil Stain Lab.
+      This project delivers a stunning scroll-based visual experience built with HTML, Tailwind CSS, and Vanilla JavaScript, featuring smooth fade and scale animations that bring every section to life.`,
+      liveDemo: "https://parsa-farshah.github.io/parallaxWebsite2/",
+      repository: "https://github.com/parsa-farshah/parallaxWebsite2",
       imageSrc:
-        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/adminPanel.png",
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/parallax.png",
+    },
+    {
+      id: "second parallax",
+      title: "Parallax Scrolling Website",
+      shortDesc:
+        "A visually stunning parallax scrolling website built with HTML5, Tailwind CSS, and Vanilla JavaScript.",
+      description: `A visually stunning parallax scrolling website built with HTML5, Tailwind CSS, and Vanilla JavaScript.
+      Inspired by award-winning websites on Awwwards (reference: Caeli Énergie), this project demonstrates smooth animations and immersive storytelling triggered by scroll events.`,
+      liveDemo: "https://parsa-farshah.github.io/parallaxWebsite/",
+      repository: "https://github.com/parsa-farshah/parallaxWebsite",
+      imageSrc:
+        "https://github.com/parsa-farshah/portfolioparsa/blob/main/public/images/caeliParallax.png",
+    },
+    {
+      id: "game",
+      title: "Modern Retro Snake Game",
+      shortDesc:
+        "A modern, fast, customizable version of the classic Snake game ",
+      description: `A modern, fast, customizable version of the classic Snake game — built with JavaScript and TailwindCSS, fully responsive and powered with smart game logic, animations, and persistent data storage.`,
+      liveDemo: "https://parsa-farshah.github.io/snakeGame/",
+      repository: "https://github.com/parsa-farshah/snakeGame",
+      imageSrc:
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/snakeGame.png",
     },
   ];
 
