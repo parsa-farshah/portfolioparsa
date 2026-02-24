@@ -34,7 +34,19 @@ Featuring Dark / Light Mode, Persian & English languages, Login system with Mock
       liveDemo: "https://admin-panel-bkq.pages.dev/",
       repository: "https://github.com/parsa-farshah/admin-panel",
       imageSrc:
-        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/shopImage.png",
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/adminPanel.png",
+    },
+    {
+      id: "adminPanel",
+      title: "Modern Admin Panel",
+      shortDesc:
+        "A modern and professional Admin Panel built with Next.js and Material UI (MUI)",
+      description: `A modern and professional Admin Panel built with Next.js and Material UI (MUI)
+Featuring Dark / Light Mode, Persian & English languages, Login system with MockAPI, and a fully functional Analytics Dashboard with Skeleton Loading.`,
+      liveDemo: "https://admin-panel-bkq.pages.dev/",
+      repository: "https://github.com/parsa-farshah/admin-panel",
+      imageSrc:
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/adminPanel.png",
     },
   ];
 
