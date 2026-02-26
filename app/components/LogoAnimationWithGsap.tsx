@@ -9,9 +9,9 @@ const LogoAnimationWithGsap = () => {
   useEffect(() => {
     gsap.fromTo(
       txt.current,
-      { x: "55%" },
+      { x: "-85%" },
       {
-        x: "-60%",
+        x: "60%",
         duration: 20,
         ease: "linear",
         repeat: -1,

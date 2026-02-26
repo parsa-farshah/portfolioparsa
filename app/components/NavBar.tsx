@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import HoverNavbarText from "./HoverNavbarText";
 import NightsStayIcon from "@mui/icons-material/NightsStay";

@@ -4,8 +4,12 @@ import * as React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
+import LineRow from "./LineRow";
+import myData from "../store";
 
 export default function Slider() {
+  const { theme } = myData();
+
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "free",
@@ -58,7 +62,7 @@ Featuring Dark / Light Mode, Persian & English languages, Login system with Mock
       liveDemo: "https://parsa-farshah.github.io/parallaxWebsite/",
       repository: "https://github.com/parsa-farshah/parallaxWebsite",
       imageSrc:
-        "https://github.com/parsa-farshah/portfolioparsa/blob/main/public/images/caeliParallax.png",
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/caeliParallax.png",
     },
     {
       id: "game",
@@ -74,44 +78,42 @@ Featuring Dark / Light Mode, Persian & English languages, Login system with Mock
   ];
 
   return (
-    <div ref={sliderRef} className="keen-slider w-full py-10 h-fit">
-      <div className="keen-slider__slide bg-amber-500 text-white  flex items-center justify-center rounded-xl h-[450px] relative overflow-hidden group">
-        <div className="w-full h-full relative group-hover:scale-110 duration-500">
-          <Image
-            fill
-            objectFit="cover"
-            src="/images/shopImage.png"
-            alt="shop"
-          />
-        </div>
+    <div ref={sliderRef} className="keen-slider w-full py-10 h-fit relative">
+      {/* shadow left */}
+      <div
+        className={`w-[150px] h-[90vh]  left-[0%] blur-xl -translate-x-1/2 top-0 absolute z-30 hidden md:flex ${theme ? "bg-gradient-to-r from-[#f6f3f0] from-60% to-[#fff0] to-100%" : "bg-gradient-to-r from-[#0b0c0e] from-60% to-[#fff0] to-100%"} `}
+      ></div>
+      {/* shadow right */}
+      <div
+        className={`w-[150px] h-[90vh] scale-x-[-1] right-[-7%] blur-xl  top-0 absolute z-30 hidden md:flex ${theme ? "bg-gradient-to-r from-[#f6f3f0] from-60% to-[#fff0] to-100%" : "bg-gradient-to-r from-[#0b0c0e] from-60% to-[#fff0] to-100%"} `}
+      ></div>
+      {myProjects.map((val, i) => {
+        return (
+          <div
+            key={val.id + val.title}
+            className="keen-slider__slide bg-amber-500 text-white  flex items-center justify-center rounded-xl h-[450px] relative overflow-hidden group cursor-pointer"
+          >
+            <div className="w-full h-full relative group-hover:scale-110 duration-500">
+              <Image
+                fill
+                style={{ objectFit: "cover" }}
+                src={val.imageSrc}
+                alt={val.title}
+              />
+            </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black/65 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black/65 to-transparent"></div>
 
-        <button className="px-3 py-2 bg-[#00000025] backdrop-blur-2xl rounded-xl absolute top-[5%] right-[5%] cursor-pointer hover:bg-[#00000033] duration-500 text-xs">
-          More Detail
-        </button>
-        <div className="absolute left-[5%] bottom-[5%] flex flex-col gap-2">
-          <h1 className="text-xl font-bold">Oliver Cabell Shop</h1>
-          <p className="text-sm font-medium">
-            A modern and fully functional e-commerce website
-          </p>
-        </div>
-      </div>
-      <div className="keen-slider__slide bg-amber-400 text-white text-3xl flex items-center justify-center rounded-xl h-[450px]">
-        2
-      </div>
-      <div className="keen-slider__slide bg-amber-200 text-white text-3xl flex items-center justify-center rounded-xl h-[450px]">
-        3
-      </div>
-      <div className="keen-slider__slide bg-blue-500 text-white text-3xl flex items-center justify-center rounded-xl h-[450px]">
-        4
-      </div>
-      <div className="keen-slider__slide bg-green-500 text-white text-3xl flex items-center justify-center rounded-xl h-[450px]">
-        5
-      </div>
-      <div className="keen-slider__slide bg-purple-500 text-white text-3xl flex items-center justify-center rounded-xl h-[450px]">
-        6
-      </div>
+            <button className="px-3 py-2 bg-[#00000048] backdrop-blur-2xl rounded-xl absolute top-[5%] right-[5%] cursor-pointer hover:bg-[#00000065] duration-500 text-xs">
+              More Detail
+            </button>
+            <div className="absolute left-[5%] bottom-[5%] flex flex-col gap-2">
+              <h1 className="text-xl font-bold">{val.title}</h1>
+              <p className="text-sm font-medium">{val.shortDesc}</p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

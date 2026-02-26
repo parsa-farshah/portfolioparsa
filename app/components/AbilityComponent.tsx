@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Ability from "./Ability";
 import myData from "../store";

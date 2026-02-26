@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import LineRow from "./LineRow";
 import LogoAnimationWithGsap from "./LogoAnimationWithGsap";

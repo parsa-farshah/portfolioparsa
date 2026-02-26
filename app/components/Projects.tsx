@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { Carattere } from "next/font/google";
+import useData from "./../store";
 
 const carattere = Carattere({
   subsets: ["latin"],
@@ -7,6 +9,7 @@ const carattere = Carattere({
 });
 
 const Projects = () => {
+  const { theme } = useData();
   return (
     <div className="py-20">
       <h4

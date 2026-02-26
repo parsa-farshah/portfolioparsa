@@ -1,4 +1,3 @@
-"use client";
 import Ability from "./components/Ability";
 import AbilityComponent from "./components/AbilityComponent";
 import Designed from "./components/Designed";
@@ -8,14 +7,13 @@ import LineRow from "./components/LineRow";
 import LogosAnimation from "./components/LogosAnimation";
 import NavBar from "./components/NavBar";
 import SliderProjects from "./components/SliderProjects";
-import useData from "./store";
+import ThemeWrapper from "./components/ThemeWrapper";
+import TwoWaysToBegin from "./components/TwoWaysToBegin";
+import myData from "./store";
 
 export default function Home() {
-  const { theme } = useData();
   return (
-    <div
-      className={` w-full h-[9000vh] flex flex-col relative overflow-hidden ${theme ? "bg-[#f6f3f0]" : "bg-[#0b0c0e]"} `}
-    >
+    <ThemeWrapper>
       {/* navbar */}
       <NavBar />
       <LineAndShadowHEader />
@@ -27,7 +25,10 @@ export default function Home() {
       <LogosAnimation />
       <AbilityComponent />
       <Designed />
-      <SliderProjects />
-    </div>
+      <div className="relative">
+        <SliderProjects />
+      </div>
+      <TwoWaysToBegin />
+    </ThemeWrapper>
   );
 }
