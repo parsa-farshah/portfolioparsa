@@ -85,7 +85,7 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
       liveDemo: "https://parsa-farshah.github.io/fresh-swiper/",
       repository: "https://github.com/parsa-farshah/fresh-swiper",
       imageSrc:
-        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/snakeGame.png",
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/Library.png",
     },
   ];
 
