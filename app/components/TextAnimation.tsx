@@ -19,7 +19,7 @@ const TextAnimation = () => {
   }, []);
   return (
     <div className="w-[96%] md:w-[76%] mx-auto overflow-hidden relative top-[250px]">
-      <h3 className="text-9xl whitespace-nowrap text-[#7c7b7a]" ref={txt}>
+      <h3 className="text-9xl whitespace-nowrap text-[#7c7b7a] select-none" ref={txt}>
         PARSA® DEHGHAN® POUR® FARASHAH®
       </h3>
     </div>

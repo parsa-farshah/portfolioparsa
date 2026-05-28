@@ -2,10 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-   images: {
-    domains: ["raw.githubusercontent.com"],
-
-  },
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

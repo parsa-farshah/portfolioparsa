@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import HoverNavbarText from "./HoverNavbarText";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
@@ -10,11 +10,12 @@ import { Slide } from "@mui/material";
 
 export default function NavBar() {
   const [active, setActive] = useState("");
-  const menuTitle = ["Home", "About", "Pricing", "FAQ"];
+  const menuTitle: string[] = ["Home", "About", "Pricing", "FAQ"];
   const { theme, updateTheme } = myData();
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div
-      className={`w-[80%] md:w-[572px] h-[66px]  border border-[#a1a1a14f] rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-50 backdrop-blur-lg ${theme ? "bg-[#d3d3d3bb] text-black" : "bg-[#020202a8] text-white"} `}
+      className={`w-[80%] md:w-[572px] h-[66px]  border border-[#a1a1a14f] rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-50 backdrop-blur-xs ${theme ? "bg-[#d3d3d3bb] text-black" : "bg-[#020202a8] text-white"} `}
     >
       {/* left */}
       <div>
@@ -92,20 +93,28 @@ export default function NavBar() {
         <div className="w-[91px] h-[32px] border-2 border-[#3578ff] bg-[#0055fe] rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300">
           <HoverNavbarText text="Contact" />
         </div>
+
         {/* menu humburger in menu  */}
-        {/* dark light icon */}
         <div
           className={`w-8 h-8 rounded-md border  flex justify-center items-center md:hidden cursor-pointer ${theme ? "border-[#74747460]" : "border-[#ffffff60] "} `}
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+          }}
         >
           <MenuIcon
             sx={{
               width: "20px",
               height: "20px",
-              color: theme ? "black": "white",
+              color: theme ? "black" : "white",
             }}
           />
         </div>
       </div>
+
+      {/* menu mobile */}
+      <div
+        className={`absolute left-0 top-20  z-50 w-full duration-700 rounded-2xl backdrop-blur-xs   ${theme ? "bg-[#d3d3d3bb] text-black" : "bg-[#020202a8] text-white"} ${menuOpen ? "h-[300px] border border-[#a1a1a14f] " : "h-[0px] "} `}
+      ></div>
     </div>
   );
 }

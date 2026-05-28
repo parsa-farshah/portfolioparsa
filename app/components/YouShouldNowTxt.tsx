@@ -10,25 +10,21 @@ const carattere = Carattere({
   weight: ["400"],
 });
 
-const TwoWaysToBegin = () => {
+function YouShouldNowTxt() {
   const { theme } = myData();
+
   return (
-    <div className="py-20">
-      <LineRow />
+    <div>
       <h4
-        className={`text-4xl md:text-5xl flex justify-center py-20 ${
+        className={`text-4xl md:text-5xl flex justify-center pb-20 ${
           theme ? "text-[#282929]" : "text-[#d9d7d5]"
         }`}
       >
-        Two Ways To{" "}
-        <span className={`px-3 ${carattere.className}`}>Begin</span>{" "}
+        You Should To
+        <span className={`px-3 ${carattere.className}`}>Know</span>{" "}
       </h4>
-      <TabsDemo />
-      <div className="mt-20">
-        <LineRow />
-      </div>
     </div>
   );
-};
+}
 
-export default TwoWaysToBegin;
+export default YouShouldNowTxt;

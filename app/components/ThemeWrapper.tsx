@@ -6,7 +6,7 @@ export default function ThemeWrapper({ children }) {
 
   return (
     <div
-      className={`w-full h-[9000vh] flex flex-col relative overflow-hidden ${
+      className={`w-full h-fit flex flex-col relative overflow-hidden ${
         theme ? "bg-[#f6f3f0]" : "bg-[#0b0c0e]"
       }`}
     >

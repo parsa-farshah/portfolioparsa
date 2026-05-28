@@ -8,6 +8,7 @@ import { Carattere } from "next/font/google";
 
 
 gsap.registerPlugin(ScrollTrigger);
+
 const carattere = Carattere({
   subsets: ["latin"],
   weight: ["400"],

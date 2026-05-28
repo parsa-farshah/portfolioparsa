@@ -1,5 +1,6 @@
 import Ability from "./components/Ability";
 import AbilityComponent from "./components/AbilityComponent";
+import Accordion from "./components/Accordion";
 import Designed from "./components/Designed";
 import Header from "./components/Header";
 import LineAndShadowHEader from "./components/LineAndShadowHEader";
@@ -14,21 +15,24 @@ import myData from "./store";
 export default function Home() {
   return (
     <ThemeWrapper>
-      {/* navbar */}
-      <NavBar />
-      <LineAndShadowHEader />
-      {/* header */}
-      <div className="w-full h-fit">
-        <Header />
+      <div>
+        {/* navbar */}
+        <NavBar />
+        <LineAndShadowHEader />
+        {/* header */}
+        <div className="w-full h-fit">
+          <Header />
+        </div>
+        {/* logo row*/}
+        <LogosAnimation />
+        <AbilityComponent />
+        <Designed />
+        <div className="relative">
+          <SliderProjects />
+        </div>
+        <TwoWaysToBegin />
+        <Accordion />
       </div>
-      {/* logo row*/}
-      <LogosAnimation />
-      <AbilityComponent />
-      <Designed />
-      <div className="relative">
-        <SliderProjects />
-      </div>
-      <TwoWaysToBegin />
     </ThemeWrapper>
   );
 }

@@ -19,7 +19,7 @@ const LogoAnimationWithGsap = () => {
     );
   }, []);
   return (
-    <div className="w-[95.5%] md:w-[75.5%] mx-auto overflow-hidden ">
+    <div className="w-[95.5%] md:w-[75.5%] mx-auto overflow-hidden select-none">
       <div
         className="inline-flex whitespace-nowrap gap-26 py-20"
         ref={txt}

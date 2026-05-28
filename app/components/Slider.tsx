@@ -75,6 +75,18 @@ Featuring Dark / Light Mode, Persian & English languages, Login system with Mock
       imageSrc:
         "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/snakeGame.png",
     },
+    {
+      id: "Library",
+      title: "Fresh Slider v1.0.4",
+      shortDesc:
+        "A modern, responsive, and fully looped 3D slider/Carousel library built with pure JavaScript and CSS.",
+      description: `A modern, responsive, and fully looped 3D slider/Carousel library built with pure JavaScript and CSS.
+Easily create interactive sliders with unique animations, dynamic perspectives, and smooth transitions — no external dependencies required! ✨`,
+      liveDemo: "https://parsa-farshah.github.io/fresh-swiper/",
+      repository: "https://github.com/parsa-farshah/fresh-swiper",
+      imageSrc:
+        "https://raw.githubusercontent.com/parsa-farshah/portfolioparsa/refs/heads/main/public/images/snakeGame.png",
+    },
   ];
 
   return (
