@@ -1,7 +1,7 @@
 "use client";
 import myData from "../store";
 
-export default function ThemeWrapper({ children }) {
+export default function ThemeWrapper({ children } : any) {
   const { theme } = myData();
 
   return (

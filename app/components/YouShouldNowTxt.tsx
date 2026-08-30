@@ -2,8 +2,6 @@
 import React from "react";
 import { Carattere } from "next/font/google";
 import myData from "../store";
-import LineRow from "./LineRow";
-import { TabsDemo } from "./TabsDemo";
 
 const carattere = Carattere({
   subsets: ["latin"],

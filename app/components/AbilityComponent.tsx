@@ -16,7 +16,7 @@ function AbilityComponent() {
   return (
     <div className="py-20">
       <h4
-        className={`text-4xl md:text-5xl flex justify-center ${
+        className={`text-xl sm:text-4xl md:text-5xl flex justify-center ${
           theme ? "text-[#282929]" : "text-[#d9d7d5]"
         }`}
       >

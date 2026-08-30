@@ -103,7 +103,7 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
         return (
           <div
             key={val.id + val.title}
-            className="keen-slider__slide bg-amber-500 text-white  flex items-center justify-center rounded-xl h-[450px] relative overflow-hidden group cursor-pointer"
+            className="keen-slider__slide bg-amber-500 text-white  flex items-center justify-center rounded-xl h-[350px] md:h-[450px] relative overflow-hidden group cursor-pointer"
           >
             <div className="w-full h-full relative group-hover:scale-110 duration-500">
               <Image

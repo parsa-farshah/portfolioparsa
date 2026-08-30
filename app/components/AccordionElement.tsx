@@ -1,97 +1,55 @@
 "use client";
-import { useState } from "react";
 import myData from "../store";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const AccordionElement = () => {
   const { theme } = myData();
 
-  const [accordWrapp, setAccordWrapp] = useState<string, boolean>({
-    number1: false,
-    number2: false,
-    number3: false,
-  });
+  const items = [
+    {
+      value: "billing",
+      trigger: "How does billing work?",
+      content:
+        "We offer monthly and annual subscription plans. Billing is charged at the beginning of each cycle, and you can cancel anytime. All plans include automatic backups, 24/7 support, and unlimited team members.",
+    },
+    {
+      value: "security",
+      trigger: "Is my data secure?",
+      content:
+        "Yes. We use end-to-end encryption, SOC 2 Type II compliance, and regular third-party security audits. All data is encrypted at rest and in transit using industry-standard protocols.",
+    },
+    {
+      value: "integration",
+      trigger: "What integrations do you support?",
+      content:
+        "We integrate with 500+ popular tools including Slack, Zapier, Salesforce, HubSpot, and more. You can also build custom integrations using our REST API and webhooks.",
+    },
+  ];
 
   return (
-    <div className="w-fit h-full flex flex-col justify-center items-center relative mx-auto">
-      {/* 1 */}
-      <div
-        onClick={() => {
-          setAccordWrapp(() => {
-            return {
-              ...accordWrapp,
-              number1: !accordWrapp.number1,
-              number2: false,
-              number3: false,
-            };
-          });
-        }}
-        className={`w-[90%] md:w-[46%] h-fit text-lg p-5 rounded-xl cursor-pointer duration-500 border border-[#a1a1a14f] ${theme ? "bg-[#d3d3d33a] text-black" : "bg-[#020202a8] text-white"}`}
+    <div className="flex justify-center  relative z-50">
+      <Accordion
+        type="single"
+        collapsible
+        className="w-[80%] md:w-[50%] rounded-lg border border-[#a1a1a14f]"
+        defaultValue="billing"
       >
-        <p>
-          {" "}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
-          dignissimos
-        </p>
-      </div>
-      <p
-        className={`w-[90%] md:w-[46%] m-2 text-justify duration-700 px-5 ${theme ? " text-black" : " text-white"}  ${accordWrapp.number1 ? "h-[100px] overflow-auto overflow-y-hidden" : "h-[0px] overflow-hidden"}`}
-      >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus dolor
-        illum facilis recusandae autem sapiente atque sit, voluptate
-        reprehenderit quae, dolores perspiciatis tenetur! Tempora, dolorum?
-        Minus laborum qui velit possimus.
-      </p>
-      {/* 2 */}
-      <div
-        onClick={() => {
-          setAccordWrapp(() => {
-            return {
-              ...accordWrapp,
-              number2: !accordWrapp.number2,
-              number1: false,
-              number3: false,
-            };
-          });
-        }}
-        className={`w-[90%] md:w-[46%] h-fit text-lg p-5 rounded-xl cursor-pointer duration-500 border border-[#a1a1a14f] ${theme ? "bg-[#d3d3d33a] text-black" : "bg-[#020202a8] text-white"}`}
-      >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
-        dignissimos
-      </div>
-      <p
-        className={`w-[90%] md:w-[46%] m-2 text-justify duration-700 px-5 ${theme ? " text-black" : " text-white"} ${accordWrapp.number2 ? "h-[100px] overflow-auto overflow-y-hidden" : "h-[0px] overflow-hidden"}`}
-      >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus dolor
-        illum facilis recusandae autem sapiente atque sit, voluptate
-        reprehenderit quae, dolores perspiciatis tenetur! Tempora, dolorum?
-        Minus laborum qui velit possimus.
-      </p>
-
-      {/* 3 */}
-      <div
-        onClick={() => {
-          setAccordWrapp(() => {
-            return {
-              ...accordWrapp,
-              number3: !accordWrapp.number3,
-              number1: false,
-              number2: false,
-            };
-          });
-        }}
-        className={`w-[90%] md:w-[46%] h-fit text-lg p-5 rounded-xl cursor-pointer duration-500 border border-[#a1a1a14f] ${theme ? "bg-[#d3d3d33a] text-black" : "bg-[#020202a8] text-white"}`}
-      >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
-        dignissimos
-      </div>
-      <p
-        className={`w-[90%] md:w-[46%] m-2 text-justify duration-700 px-5 ${theme ? " text-black" : " text-white"}  ${accordWrapp.number3 ? "h-[100px] overflow-auto overflow-y-hidden" : "h-[0px] overflow-hidden"}`}
-      >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus dolor
-        illum facilis recusandae autem sapiente atque sit, voluptate
-        reprehenderit quae, dolores perspiciatis tenetur! Tempora, dolorum?
-        Minus laborum qui velit possimus.
-      </p>
+        {items.map((item) => (
+          <AccordionItem
+            key={item.value}
+            value={item.value}
+            className={`border-b px-4 last:border-b-0 border-[#a1a1a14f] ${theme ? "text-black" : "text-white"}`}
+          >
+            <AccordionTrigger>{item.trigger}</AccordionTrigger>
+            <AccordionContent>{item.content}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
     </div>
   );
 };

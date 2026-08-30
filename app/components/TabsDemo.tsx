@@ -15,7 +15,7 @@ export function TabsDemo() {
       defaultValue="overview"
       className="w-full mx-auto flex justify-center "
     >
-      <TabsList className="!w-fit !h-fit py-2 border border-[#e0e0e0] bg-[#fff0] mx-auto !px-4 flex gap-2 ">
+      <TabsList className="!w-fit !h-fit py-2 border border-[#a1a1a14f] bg-[#fff0] mx-auto !px-4 flex gap-2 ">
         <TabsTrigger
           value="overview"
           className={`w-fit h-fit px-4 py-2 data-[state=active]:bg-[#0055fe] data-[state=active]:!text-white  cursor-pointer ${theme ? " !text-black" : "!text-white"}`}

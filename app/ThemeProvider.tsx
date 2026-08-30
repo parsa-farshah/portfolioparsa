@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { useThemeStore } from "@/store/themeStore";
+import myData from "./store";
 
-export default function ThemeProvider({ initialTheme, children }) {
-  const setTheme = myData((s) => s.setTheme);
+export default function ThemeProvider({ initialTheme, children } : any) {
+  const setTheme = myData((s) => s.updateTheme);
 
   useEffect(() => {
     setTheme(initialTheme);
