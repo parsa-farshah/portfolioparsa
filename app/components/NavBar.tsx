@@ -15,7 +15,7 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div
-      className={`w-[80%] md:w-[572px] h-[66px]  border border-[#a1a1a14f] rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-50 backdrop-blur-xs ${theme ? "bg-[#d3d3d3bb] text-black" : "bg-[#020202a8] text-white"} `}
+      className={`w-[80%] md:w-[572px] h-[66px]  border border-[#a1a1a14f] rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-[1000] backdrop-blur-xs ${theme ? "bg-[#d3d3d3bb] text-black" : "bg-[#020202a8] text-white"} `}
     >
       {/* left */}
       <div >
