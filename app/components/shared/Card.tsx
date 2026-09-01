@@ -1,31 +1,40 @@
 "use client";
+import { Check } from "lucide-react";
 import Badge from "./Badge";
 import myData from "@/app/store";
 
 interface CardProps {
-  title: string;
-  description: string;
-  badgeText: string;
-  price: string;
-  priceDescription: string;
-  buttonText: string;
+  title?: string;
+  description?: string;
+  badgeText?: string;
+  price?: string;
+  priceDescription?: string;
+  buttonText?: string;
   buttonAction?: () => void;
+  items?: string[];
 }
 
 function Card({
   title = "Essential",
   description = "Simple, focused, effective.",
-  badgeText = "best",
+  badgeText,
   price = "750",
   priceDescription = "Perfect for personal sites and small teams.",
   buttonText = "start with essential",
+  items = [
+    "Custom one-page website design",
+    "Fully responsive layout",
+    "Light animations & interactions",
+    "Webflow CMS setup (optional)",
+    "SEO-ready structure",
+  ],
   buttonAction,
 }: CardProps) {
   const { theme } = myData();
 
   return (
     <section
-      className={`border relative border-gray-600/30 rounded-lg h-[100vh] w-[95%] ${theme ? "bg-[#F6F3F0] text-black" : "bg-[#0B0C0E] text-white"} `}
+      className={`border relative z-50 border-gray-600/30 rounded-lg w-fit h-fit ${theme ? "bg-[#F6F3F0] text-black" : "bg-[#0B0C0E] text-white"} `}
     >
       {/* bg top right */}
       <div
@@ -42,9 +51,11 @@ function Card({
             <span className="text-lg font-bold">{title}</span>
             <p className="text-sm text-gray-400">{description}</p>
           </div>
-          <div>
-            <Badge text={badgeText} />
-          </div>
+          {badgeText && (
+            <div>
+              <Badge text={badgeText} />
+            </div>
+          )}
         </section>
         {/* price */}
         <section>
@@ -58,10 +69,27 @@ function Card({
         {/* start button */}
         <button
           onClick={buttonAction}
-          className="w-full border-2 border-[#3578ff] bg-[#0055fe] rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300 py-2"
+          className={`w-full border-2 border-[#3578ff] bg-[#0055fe] rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300 py-2`}
         >
-          <span className="font-semibold">{buttonText}</span>
+          <span className="font-semibold text-white">{buttonText}</span>
         </button>
+
+        {/* items */}
+        <span className="uppercase text-sm md:text-lg text-gray-300/80">
+          you'll get
+        </span>
+        <ul className="flex flex-col gap-3">
+          {items.map((item) => {
+            return (
+              <div className="flex gap-2">
+                <div className="p-1 bg-linear-to-br from-blue-500 to-blue-900 rounded-lg border border-blue-400/50">
+                  <Check size={20} />
+                </div>
+                <li className="text-sm sm:text-lg">{item}</li>
+              </div>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
