@@ -9,12 +9,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Slider() {
   const { theme } = myData();
-
-  // const [sliderRef] = useKeenSlider<HTMLDivElement>({
-  //   loop: true,
-  //   mode: "free",
-  //   slides: { origin: "center", perView: 1.24, spacing: 50 },
-  // });
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [loaded, setLoaded] = React.useState(false);
 
@@ -154,9 +148,10 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
         <>
           <div>
             <button
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
+              onClick={(e) => {
+                e.stopPropagation();
+                instanceRef.current?.prev();
+              }}
               className="absolute left-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full backdrop-blur-md hover:bg-[#0055fe]/90 transition-all bg-[#0055fe] text-white border border-blue-400  shadow-lg shadow-blue-500/30 cursor-pointer"
             >
               <ChevronLeft size={24} />
@@ -164,7 +159,10 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
           </div>
 
           <button
-            onClick={(e) => e.stopPropagation() || instanceRef.current?.next()}
+            onClick={(e) => {
+              e.stopPropagation();
+              instanceRef.current?.next();
+            }}
             className="absolute right-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full backdrop-blur-md hover:bg-[#0055fe]/90 transition-all bg-[#0055fe] text-white border border-blue-400  shadow-lg shadow-blue-500/30 cursor-pointer"
           >
             <ChevronRight size={24} />
