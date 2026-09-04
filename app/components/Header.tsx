@@ -12,7 +12,11 @@ const Header = () => {
           display: "flex",
           justifyContent: "center",
           mt: "22px",
-          fontSize: "20px",
+          fontSize: {
+            xs: "16px",
+            md: "20px",
+            lg: "24px",
+          },
           color: "#858584",
           fontWeight: "600",
         }}
@@ -24,7 +28,11 @@ const Header = () => {
           display: "flex",
           justifyContent: "center",
           mt: "4px",
-          fontSize: "20px",
+          fontSize: {
+            xs: "14px",
+            md: "16px",
+            lg: "18px",
+          },
           color: "#858584",
           fontWeight: "600",
         }}

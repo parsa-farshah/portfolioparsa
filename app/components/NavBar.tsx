@@ -90,8 +90,8 @@ export default function NavBar() {
           )}
         </div>
         {/* contact */}
-        <div className="w-[91px] h-[32px] border-2 border-[#3578ff] bg-[#0055fe] rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300">
-          <HoverNavbarText text="Contact" />
+        <div className="w-[91px] h-[32px] border-2 border-[#3578ff] bg-[#0055fe] rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300 text-white">
+          <HoverNavbarText text="CONTACT" />
         </div>
 
         {/* menu humburger in menu  */}

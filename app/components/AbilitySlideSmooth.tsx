@@ -14,7 +14,7 @@ const AbilitySlideSmooth = forwardRef<HTMLDivElement, any>(
         style={{ zIndex: z }}
       >
         <div
-          className={`w-[80%] md:w-[667px] rounded-xl p-8 border shadow-lg relative overflow-hidden ${theme ? "bg-[#f5f2f0] border-[#d4d2cf]" : "bg-[#0b0c0f] border-[#27282a]"}`}
+          className={`w-[80%] md:w-[70%] lg:w-[667px] rounded-xl p-8 border shadow-lg relative overflow-hidden ${theme ? "bg-[#f5f2f0] border-[#d4d2cf]" : "bg-[#0b0c0f] border-[#27282a]"}`}
         >
           {/* bg top right */}
           <div
