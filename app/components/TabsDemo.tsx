@@ -66,35 +66,37 @@ export function TabsDemo() {
         className="mt-20 w-fit mx-auto flex justify-center flex-wrap gap-10"
         value="Yearly"
       >
-        <Card
-          title="Essential"
-          description="Simple, focused, effective."
-          badgeText="best"
-          price="750"
-          priceDescription="Perfect for personal sites and small teams."
-          buttonText="Start with Essential"
-          items={[
-            "Custom one-page website design",
-            "Fully responsive layout",
-            "Light animations & interactions",
-            "Webflow CMS setup (optional)",
-            "SEO-ready structure",
-          ]}
-        ></Card>
-        <Card
-          title="Elevate"
-          description="For stories that deserve motion."
-          price="1,750"
-          priceDescription="Best for growing businesses and creative studios."
-          buttonText="Start with Elevate"
-          items={[
-            "Multi-page website (up to 5 pages)",
-            "Custom UI/UX design",
-            "Advanced GSAP animations",
-            "CMS & dynamic collections",
-            "Launch support & training",
-          ]}
-        ></Card>
+        <section className="p-5 w-full flex flex-col gap-10 lg:flex-row">
+          <Card
+            title="Essential"
+            description="Simple, focused, effective."
+            badgeText="best"
+            price="750"
+            priceDescription="Perfect for personal sites and small teams."
+            buttonText="Start with Essential"
+            items={[
+              "Custom one-page website design",
+              "Fully responsive layout",
+              "Light animations & interactions",
+              "Webflow CMS setup (optional)",
+              "SEO-ready structure",
+            ]}
+          ></Card>
+          <Card
+            title="Elevate"
+            description="For stories that deserve motion."
+            price="1,750"
+            priceDescription="Best for growing businesses and creative studios."
+            buttonText="Start with Elevate"
+            items={[
+              "Multi-page website (up to 5 pages)",
+              "Custom UI/UX design",
+              "Advanced GSAP animations",
+              "CMS & dynamic collections",
+              "Launch support & training",
+            ]}
+          ></Card>
+        </section>
       </TabsContent>
     </Tabs>
   );

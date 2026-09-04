@@ -34,7 +34,7 @@ function Card({
 
   return (
     <section
-      className={`border relative z-50 border-gray-600/30 rounded-lg w-fit h-fit ${theme ? "bg-[#F6F3F0] text-black" : "bg-[#0B0C0E] text-white"} `}
+      className={`border relative z-50 border-gray-600/30 rounded-lg w-fit h-fit overflow-hidden ${theme ? "bg-[#F6F3F0] text-black" : "bg-[#0B0C0E] text-white"} `}
     >
       {/* bg top right */}
       <div
@@ -75,7 +75,7 @@ function Card({
         </button>
 
         {/* items */}
-        <span className="uppercase text-sm md:text-lg text-gray-300/80">
+        <span className="uppercase text-sm md:text-base text-gray-500 font-bold">
           you'll get
         </span>
         <ul className="flex flex-col gap-3">
@@ -83,7 +83,7 @@ function Card({
             return (
               <div className="flex gap-2">
                 <div className="p-1 bg-linear-to-br from-blue-500 to-blue-900 rounded-lg border border-blue-400/50">
-                  <Check size={20} />
+                  <Check size={20} className="text-white" />
                 </div>
                 <li className="text-sm sm:text-lg">{item}</li>
               </div>

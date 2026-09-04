@@ -4,16 +4,40 @@ import * as React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
-import LineRow from "./LineRow";
 import myData from "../store";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Slider() {
   const { theme } = myData();
 
-  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+  // const [sliderRef] = useKeenSlider<HTMLDivElement>({
+  //   loop: true,
+  //   mode: "free",
+  //   slides: { origin: "center", perView: 1.24, spacing: 50 },
+  // });
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [loaded, setLoaded] = React.useState(false);
+
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "free",
-    slides: { origin: "center", perView: 1.4, spacing: 50 },
+    slides: { origin: "center", perView: 1.2, spacing: 10 },
+    initial: 0,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+
+    breakpoints: {
+      "(min-width: 768px)": {
+        slides: { origin: "center", perView: 1.5, spacing: 50 },
+      },
+      "(min-width: 1024px)": {
+        slides: { origin: "center", perView: 1.8, spacing: 50 },
+      },
+    },
   });
 
   const myProjects = [
@@ -103,7 +127,7 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
         return (
           <div
             key={val.id + val.title}
-            className="keen-slider__slide bg-amber-500 text-white  flex items-center justify-center rounded-xl h-[350px] md:h-[450px] relative overflow-hidden group cursor-pointer"
+            className="keen-slider__slide bg-amber-500 text-white  flex items-center justify-center rounded-xl h-[270px] sm:h-[450px] relative overflow-hidden group cursor-pointer"
           >
             <div className="w-full h-full relative group-hover:scale-110 duration-500">
               <Image
@@ -114,7 +138,7 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
               />
             </div>
 
-            <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black/65 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-full h-[80%] sm:h-[50%] bg-gradient-to-t from-black/65 to-transparent"></div>
 
             <button className="px-3 py-2 bg-[#00000048] backdrop-blur-2xl rounded-xl absolute top-[5%] right-[5%] cursor-pointer hover:bg-[#00000065] duration-500 text-xs">
               More Detail
@@ -126,6 +150,27 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
           </div>
         );
       })}
+      {loaded && instanceRef.current && (
+        <>
+          <div>
+            <button
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.prev()
+              }
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full backdrop-blur-md hover:bg-[#0055fe]/90 transition-all bg-[#0055fe] text-white border border-blue-400  shadow-lg shadow-blue-500/30 cursor-pointer"
+            >
+              <ChevronLeft size={24} />
+            </button>
+          </div>
+
+          <button
+            onClick={(e) => e.stopPropagation() || instanceRef.current?.next()}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full backdrop-blur-md hover:bg-[#0055fe]/90 transition-all bg-[#0055fe] text-white border border-blue-400  shadow-lg shadow-blue-500/30 cursor-pointer"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </>
+      )}
     </div>
   );
 }

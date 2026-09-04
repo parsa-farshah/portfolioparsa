@@ -16,7 +16,7 @@ const TwoWaysToBegin = () => {
     <div className="py-20">
       <LineRow />
       <h4
-        className={`text-4xl md:text-5xl flex justify-center py-20 ${
+        className={`text-2xl sm:text-4xl md:text-5xl flex justify-center py-20 ${
           theme ? "text-[#282929]" : "text-[#d9d7d5]"
         }`}
       >
