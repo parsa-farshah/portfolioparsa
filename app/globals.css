@@ -47,6 +47,58 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+/*
+  Portfolio design system colors.
+  Each token creates Tailwind classes, for example:
+  --color-brand  ->  bg-brand, text-brand, border-brand
+  Light theme tokens end with "-light", dark theme tokens end with "-dark".
+*/
+@theme {
+  /* Brand (blue) */
+  --color-brand: #0055fe;
+  --color-brand-border: #3578ff;
+  --color-brand-glow-light: #a7c1f4;
+  --color-brand-glow-dark: #07245e;
+
+  /* Page background */
+  --color-page-light: #f6f3f0;
+  --color-page-dark: #0b0c0e;
+
+  /* Cards */
+  --color-card-light: #f5f2f0;
+  --color-card-dark: #0b0c0f;
+  --color-card-border-light: #d4d2cf;
+  --color-card-border-dark: #27282a;
+
+  /* Text */
+  --color-heading-light: #282929;
+  --color-heading-dark: #d9d7d5;
+  --color-body-light: #343536;
+  --color-body-dark: #c1c0c1;
+  --color-description: #6d788c;
+  --color-subtle: #858584;
+  --color-big-text: #7c7b7a;
+
+  /* Lines and borders */
+  --color-line-light: #80808062;
+  --color-line-dark: #ffffff2d;
+  --color-outline: #a1a1a14f;
+  --color-icon-border-light: #74747460;
+  --color-icon-border-dark: #ffffff60;
+  --color-icon-box-border: #bebbbb63;
+  --color-image-border: #a0a0a0;
+  --color-dot: #cecece;
+
+  /* Navbar */
+  --color-navbar-light: #d3d3d3bb;
+  --color-navbar-dark: #020202a8;
+  --color-navbar-active: #c5c5c5d7;
+
+  /* Overlay buttons on images */
+  --color-overlay: #00000048;
+  --color-overlay-hover: #00000065;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
