@@ -60,6 +60,9 @@ const LogoAnimationWithGsap = () => {
         <div className="w-16 h-16 relative">
           <Image src="/icons/zustand.svg" alt="zustand logo" fill />
         </div>
+        <div className="w-16 h-16 relative">
+          <Image src="/icons/tanstack.png" alt="tanstack query logo" fill />
+        </div>
       </div>
     </div>
   );
