@@ -111,11 +111,11 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
     <div ref={sliderRef} className="keen-slider w-full py-10 h-fit relative">
       {/* shadow left */}
       <div
-        className={`w-[150px] h-[90vh]  left-[0%] blur-xl -translate-x-1/2 top-0 absolute z-30 hidden md:flex ${theme ? "bg-gradient-to-r from-[#f6f3f0] from-60% to-[#fff0] to-100%" : "bg-gradient-to-r from-[#0b0c0e] from-60% to-[#fff0] to-100%"} `}
+        className={`w-[150px] h-[90vh]  left-[0%] blur-xl -translate-x-1/2 top-0 absolute z-30 hidden md:flex ${theme ? "bg-gradient-to-r from-page-light from-60% to-[#fff0] to-100%" : "bg-gradient-to-r from-page-dark from-60% to-[#fff0] to-100%"} `}
       ></div>
       {/* shadow right */}
       <div
-        className={`w-[150px] h-[90vh] scale-x-[-1] right-[-7%] blur-xl  top-0 absolute z-30 hidden md:flex ${theme ? "bg-gradient-to-r from-[#f6f3f0] from-60% to-[#fff0] to-100%" : "bg-gradient-to-r from-[#0b0c0e] from-60% to-[#fff0] to-100%"} `}
+        className={`w-[150px] h-[90vh] scale-x-[-1] right-[-7%] blur-xl  top-0 absolute z-30 hidden md:flex ${theme ? "bg-gradient-to-r from-page-light from-60% to-[#fff0] to-100%" : "bg-gradient-to-r from-page-dark from-60% to-[#fff0] to-100%"} `}
       ></div>
       {myProjects.map((val, i) => {
         return (
@@ -134,7 +134,7 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
 
             <div className="absolute bottom-0 left-0 w-full h-[80%] sm:h-[50%] bg-gradient-to-t from-black/65 to-transparent"></div>
 
-            <button className="px-3 py-2 bg-[#00000048] backdrop-blur-2xl rounded-xl absolute top-[5%] right-[5%] cursor-pointer hover:bg-[#00000065] duration-500 text-xs">
+            <button className="px-3 py-2 bg-overlay backdrop-blur-2xl rounded-xl absolute top-[5%] right-[5%] cursor-pointer hover:bg-overlay-hover duration-500 text-xs">
               More Detail
             </button>
             <div className="absolute left-[5%] bottom-[5%] flex flex-col gap-2">
@@ -152,7 +152,7 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
                 e.stopPropagation();
                 instanceRef.current?.prev();
               }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full backdrop-blur-md hover:bg-[#0055fe]/90 transition-all bg-[#0055fe] text-white border border-blue-400  shadow-lg shadow-blue-500/30 cursor-pointer"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full backdrop-blur-md hover:bg-brand/90 transition-all bg-brand text-white border border-blue-400  shadow-lg shadow-blue-500/30 cursor-pointer"
             >
               <ChevronLeft size={24} />
             </button>
@@ -163,7 +163,7 @@ Easily create interactive sliders with unique animations, dynamic perspectives, 
               e.stopPropagation();
               instanceRef.current?.next();
             }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full backdrop-blur-md hover:bg-[#0055fe]/90 transition-all bg-[#0055fe] text-white border border-blue-400  shadow-lg shadow-blue-500/30 cursor-pointer"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full backdrop-blur-md hover:bg-brand/90 transition-all bg-brand text-white border border-blue-400  shadow-lg shadow-blue-500/30 cursor-pointer"
           >
             <ChevronRight size={24} />
           </button>

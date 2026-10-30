@@ -36,14 +36,14 @@ const AccordionElement = () => {
       <Accordion
         type="single"
         collapsible
-        className="w-[80%] md:w-[50%] rounded-lg border border-[#a1a1a14f]"
+        className="w-[80%] md:w-[50%] rounded-lg border border-outline"
         defaultValue="billing"
       >
         {items.map((item) => (
           <AccordionItem
             key={item.value}
             value={item.value}
-            className={`border-b px-4 last:border-b-0 border-[#a1a1a14f] ${theme ? "text-black" : "text-white"}`}
+            className={`border-b px-4 last:border-b-0 border-outline ${theme ? "text-black" : "text-white"}`}
           >
             <AccordionTrigger>{item.trigger}</AccordionTrigger>
             <AccordionContent>{item.content}</AccordionContent>

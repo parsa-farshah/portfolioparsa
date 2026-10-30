@@ -1,6 +1,8 @@
 import AbilityComponent from "./components/AbilityComponent";
 import Accordion from "./components/Accordion";
+import CallToAction from "./components/CallToAction";
 import Designed from "./components/Designed";
+import Footer from "./components/footer/Footer";
 import Header from "./components/Header";
 import LineAndShadowHEader from "./components/LineAndShadowHEader";
 import LogosAnimation from "./components/LogosAnimation";
@@ -29,6 +31,8 @@ export default function Home() {
         </div>
         <TwoWaysToBegin />
         <Accordion />
+        <CallToAction />
+        <Footer />
       </div>
     </ThemeWrapper>
   );

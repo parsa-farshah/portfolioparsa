@@ -34,15 +34,15 @@ function Card({
 
   return (
     <section
-      className={`border relative z-50 border-gray-600/30 rounded-lg w-fit h-fit overflow-hidden ${theme ? "bg-[#F6F3F0] text-black" : "bg-[#0B0C0E] text-white"} `}
+      className={`border relative z-50 border-gray-600/30 rounded-lg w-fit h-fit overflow-hidden ${theme ? "bg-page-light text-black" : "bg-page-dark text-white"} `}
     >
       {/* bg top right */}
       <div
-        className={`w-[70%] h-[50%] absolute right-0 top-0 bg-radial-[at_120%_25%] to-65% ${theme ? "from-[#a7c1f4] to-[#f5f2f0]" : "from-[#07245e] to-[#0b0c0f]"}`}
+        className={`w-[70%] h-[50%] absolute right-0 top-0 bg-radial-[at_120%_25%] to-65% ${theme ? "from-brand-glow-light to-card-light" : "from-brand-glow-dark to-card-dark"}`}
       ></div>
       {/* bg bottom left */}
       <div
-        className={`w-[70%] h-[50%] scale-[-1] absolute left-0 bottom-0 bg-radial-[at_100%_25%] to-75% ${theme ? "from-[#a7c1f4] to-[#f5f2f0]" : "from-[#07245e] to-[#0b0c0f]"}`}
+        className={`w-[70%] h-[50%] scale-[-1] absolute left-0 bottom-0 bg-radial-[at_100%_25%] to-75% ${theme ? "from-brand-glow-light to-card-light" : "from-brand-glow-dark to-card-dark"}`}
       ></div>
       <div className="flex  flex-col gap-8 relative z-30 p-6">
         {/* title and badge */}
@@ -69,7 +69,7 @@ function Card({
         {/* start button */}
         <button
           onClick={buttonAction}
-          className={`w-full border-2 border-[#3578ff] bg-[#0055fe] rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300 py-2`}
+          className={`w-full border-2 border-brand-border bg-brand rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300 py-2`}
         >
           <span className="font-semibold text-white">{buttonText}</span>
         </button>

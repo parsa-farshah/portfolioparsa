@@ -17,7 +17,7 @@ function AbilityComponent() {
     <div className="py-20">
       <h4
         className={`text-xl sm:text-4xl md:text-5xl flex justify-center ${
-          theme ? "text-[#282929]" : "text-[#d9d7d5]"
+          theme ? "text-heading-light" : "text-heading-dark"
         }`}
       >
         What I can <span className={`px-3 ${carattere.className}`}>help</span>{" "}

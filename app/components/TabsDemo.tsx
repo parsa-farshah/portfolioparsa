@@ -9,17 +9,17 @@ export function TabsDemo() {
       defaultValue="Monthly"
       className="w-full mx-auto flex justify-center "
     >
-      <TabsList className="!w-fit !h-fit py-2 border border-[#a1a1a14f] bg-[#fff0] mx-auto !px-4 flex gap-2 ">
+      <TabsList className="!w-fit !h-fit py-2 border border-outline bg-[#fff0] mx-auto !px-4 flex gap-2 ">
         <TabsTrigger
           value="Monthly"
-          className={`w-fit h-fit px-4 py-2 data-[state=active]:bg-[#0055fe] data-[state=active]:!text-white  cursor-pointer ${theme ? " !text-black" : "!text-white"}`}
+          className={`w-fit h-fit px-4 py-2 data-[state=active]:bg-brand data-[state=active]:!text-white  cursor-pointer ${theme ? " !text-black" : "!text-white"}`}
         >
           Monthly
         </TabsTrigger>
 
         <TabsTrigger
           value="Yearly"
-          className={`w-fit h-fit px-4 py-2 data-[state=active]:bg-[#0055fe] data-[state=active]:!text-white  cursor-pointer ${theme ? " !text-black" : "!text-white"}`}
+          className={`w-fit h-fit px-4 py-2 data-[state=active]:bg-brand data-[state=active]:!text-white  cursor-pointer ${theme ? " !text-black" : "!text-white"}`}
         >
           Professional
         </TabsTrigger>

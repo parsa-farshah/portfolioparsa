@@ -15,7 +15,7 @@ function YouShouldNowTxt() {
     <div>
       <h4
         className={`text-2xl sm:text-4xl md:text-5xl flex justify-center pb-20 ${
-          theme ? "text-[#282929]" : "text-[#d9d7d5]"
+          theme ? "text-heading-light" : "text-heading-dark"
         }`}
       >
         You Should To

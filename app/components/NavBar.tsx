@@ -15,7 +15,7 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div
-      className={`w-[80%] md:w-[572px] h-[66px]  border border-[#a1a1a14f] rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-[1000] backdrop-blur-xs ${theme ? "bg-[#d3d3d3bb] text-black" : "bg-[#020202a8] text-white"} `}
+      className={`w-[80%] md:w-[572px] h-[66px]  border border-outline rounded-2xl mt-8 p-2 flex justify-between items-center  fixed left-1/2 top-8 -translate-1/2 z-[1000] backdrop-blur-xs ${theme ? "bg-navbar-light text-black" : "bg-navbar-dark text-white"} `}
     >
       {/* left */}
       <div >
@@ -35,7 +35,7 @@ export default function NavBar() {
           return (
             <div
               key={val + i}
-              className={`rounded-md ${active === val ? "bg-[#c5c5c5d7]" : null} `}
+              className={`rounded-md ${active === val ? "bg-navbar-active" : null} `}
               onClick={() => setActive(val)}
             >
               <HoverNavbarText text={val} />
@@ -49,7 +49,7 @@ export default function NavBar() {
         {/* dark light icon */}
         <div
           onClick={() => updateTheme(!theme)}
-          className={`w-8 h-8 rounded-full border  flex justify-center items-center overflow-hidden ${theme ? "border-[#74747460]" : "border-[#ffffff60] "}`}
+          className={`w-8 h-8 rounded-full border  flex justify-center items-center overflow-hidden ${theme ? "border-icon-border-light" : "border-icon-border-dark "}`}
         >
           {theme ? (
             <Slide
@@ -90,13 +90,13 @@ export default function NavBar() {
           )}
         </div>
         {/* contact */}
-        <div className="w-[91px] h-[32px] border-2 border-[#3578ff] bg-[#0055fe] rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300 text-white">
+        <div className="w-[91px] h-[32px] border-2 border-brand-border bg-brand rounded-md flex justify-center items-center overflow-hidden shadow-lg shadow-blue-500/30 cursor-pointer hover:scale-95 duration-300 text-white">
           <HoverNavbarText text="CONTACT" />
         </div>
 
         {/* menu humburger in menu  */}
         <div
-          className={`w-8 h-8 rounded-md border  flex justify-center items-center md:hidden cursor-pointer ${theme ? "border-[#74747460]" : "border-[#ffffff60] "} `}
+          className={`w-8 h-8 rounded-md border  flex justify-center items-center md:hidden cursor-pointer ${theme ? "border-icon-border-light" : "border-icon-border-dark "} `}
           onClick={() => {
             setMenuOpen(!menuOpen);
           }}
@@ -113,7 +113,7 @@ export default function NavBar() {
 
       {/* menu mobile */}
       <div
-        className={`absolute left-0 top-20  z-50 w-full duration-700 rounded-2xl backdrop-blur-xs   ${theme ? "bg-[#d3d3d3bb] text-black" : "bg-[#020202a8] text-white"} ${menuOpen ? "h-[300px] border border-[#a1a1a14f] " : "h-[0px] "} `}
+        className={`absolute left-0 top-20  z-50 w-full duration-700 rounded-2xl backdrop-blur-xs   ${theme ? "bg-navbar-light text-black" : "bg-navbar-dark text-white"} ${menuOpen ? "h-[300px] border border-outline " : "h-[0px] "} `}
       ></div>
     </div>
   );
