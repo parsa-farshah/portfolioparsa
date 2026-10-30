@@ -14,12 +14,14 @@ const sectionLinks: FooterLink[] = [
   { title: "FAQ", href: "#" },
 ];
 
-// TODO: replace "#" with your real profile URLs
 const socialTextLinks: FooterLink[] = [
-  { title: "GitHub", href: "#" },
-  { title: "LinkedIn", href: "#" },
-  { title: "Instagram", href: "#" },
-  { title: "X", href: "#" },
+  { title: "GitHub", href: "https://github.com/parsa-farshah" },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/parsa-dehghan-pour-farashah-85ab04250",
+  },
+  { title: "YouTube", href: "https://www.youtube.com/@frontendfresh" },
+  { title: "CodePen", href: "https://codepen.io/parsa-dehghan" },
 ];
 
 function Footer() {
